@@ -5,4 +5,5 @@
 !nested-subdir/
 !subdir/
 !scratch-simulator.cc
+!lorawan-advanced-final.cc
 !CMakeLists.txt
