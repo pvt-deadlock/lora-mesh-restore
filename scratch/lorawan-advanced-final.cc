@@ -531,9 +531,17 @@ int main(int argc, char *argv[]) {
     }
     for (int i = 0; i < links.size(); i++)
     {
-        if (links[i].size() < 2) return 0;
+        if (links[i].size() < 2)
+        {
+            std::cout << "Generated random seed resulted in invalid initial network, try again or explicitly specify the seed";
+            return 0;
+        }
     }
-    if (Subgraphs(links, models).size() > 0) return 0;
+    if (Subgraphs(links, models).size() > 0)
+    {
+        std::cout << "Generated random seed resulted in invalid initial network, try again or explicitly specify the seed";
+        return 0;
+    }
 
     int affectedCount = 1;
     for (int i = 0; i < maxIter && affectedCount > 0; i++)
@@ -545,7 +553,7 @@ int main(int argc, char *argv[]) {
         if (i == 0) PrintData();
         if (logSteps != 0) PrintData();
         affectedCount = RestorationAlgorithm(models, areaSize, areaSize / 100);
-	std::cout << "Iteration: " << i << "...\n";
+	    std::cout << "Iteration: " << i << "...\n";
     }
 
     std::cout << "Iterations count : " << stage << "\n";
