@@ -8,6 +8,7 @@ See the LICENSE file for more details.
 ## Table of Contents
 * [Building ns-3](#building-ns-3)
 * [Running simulation](#running-simulation)
+* [Simulation code](#simulation-code)
 
 > **NOTE**: Much more substantial information about underlying network simulator about ns-3 can be found at
 <https://www.nsnam.org>
@@ -53,3 +54,5 @@ By default, the build artifacts will be stored in the `build/` directory.
 
 The example contains 2 parameters: power and spreading factor of the interruption. It can also get the random seed with help of "rand" parameter. If there is no seed provided, program will pick random seed based on the current timestamp. 
 
+## Simulation code
+The code of the simulation is in the lorawan-advanced-final.cc file located in scratch subdirectory.
